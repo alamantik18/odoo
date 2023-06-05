@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="persons_page" name="Company persons" inherit_id="om_company.base_template">
+        <xpath expr="///div[@class='container']" position="inside">
+            <h1>Persons list</h1>
+            <div class="d-flex justify-content-between">
+                <t t-set="last_five_records" t-value="records"/>
+                <t t-foreach="last_five_records" t-as="record">
+                    <div class="card" style="width: 25rem; margin-right: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title"><t t-esc="record.full_name"/></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><t t-esc="record.sex"/></h6>
+                            <div class="d-flex justify-content-between">
+                                <span class="card-text mr-3"><t t-esc="record.age"/></span>
+                                <span class="card-text"><t t-esc="record.company_id.name"/></span>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </xpath>
+    </template>
+</odoo>

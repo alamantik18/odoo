@@ -30,3 +30,18 @@ For a standard installation please follow the <a href="https://www.odoo.com/docu
 from the documentation.
 
 To learn the software, we recommend the <a href="https://www.odoo.com/slides">Odoo eLearning</a>, or <a href="https://www.odoo.com/page/scale-up-business-game">Scale-up</a>, the <a href="https://www.odoo.com/page/scale-up-business-game">business game</a>. Developers can start with <a href="https://www.odoo.com/documentation/16.0/developer/howtos.html">the developer tutorials</a>
+
+# Test task with ERP Odoo
+## Getting started:
+1) download a repository and configurate the file odoo/odoo/conf/odoo.conf
+2) Edit the run configuration
+Script path: [absolut path]\odoo-bin
+Parameters: -c odoo/conf/odoo.conf
+3) create venv and install requirements:
+>virtualenv venv
+> pip install -r requirements.txt
+4) run project
+
+## My module
+Instal my module and add records to DB via item in main menu
+Go to localhost:8015/persons to view person`s cards
